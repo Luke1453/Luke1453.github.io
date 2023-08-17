@@ -18,3 +18,5 @@ const config = {
 };
 
 module.exports = config;
+
+// https://www.skeleton.dev/docs/get-started
