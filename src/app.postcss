@@ -1,4 +1,26 @@
 /* Write your global styles here, in PostCSS syntax */
-/* @tailwind base; */
-/* @tailwind components; */
-/* @tailwind utilities; */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@tailwind variants;
+
+:root {
+    --theme-rounded-base: 20px;
+    --theme-rounded-container: 4px;
+    --theme-font-family-heading: Inter, system-ui, sans-serif;
+    --theme-font-family-base: system-ui;
+}
+
+html, body { @apply h-full overflow-hidden; }
+body {
+	background-color:hsla(0,0%,100%,1);
+	background-image:
+		radial-gradient(at 56% 70%, hsla(199,75%,88%,1) 0px, transparent 50%),
+		radial-gradient(at 79% 29%, hsla(229,81%,85%,1) 0px, transparent 50%),
+		radial-gradient(at 27% 81%, hsla(210,20%,98%,1) 0px, transparent 50%),
+		radial-gradient(at 27% 24%, hsla(201,79%,73%,1) 0px, transparent 50%);
+	/* background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover; */
+}
