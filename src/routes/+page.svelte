@@ -5,7 +5,7 @@
 <div class="page-container">
 	<header class="grid grid-cols-1 md:grid-cols-[1fr_auto] gap-4 items-center">
 		<div class="order-2 md:order-1 max-w-2xl space-y-8">
-			<h1 class="primary-color h1 font-bold">Hello, I'm Lukasz.</h1>
+			<h1 class="primary-color text-4xl md:text-6xl font-bold">Hello, I'm Lukasz.</h1>
 			<p class="secondary-color text-2xl">
 				A seasoned frontend developer with over 20 years of experience in creating responsive and
 				user-friendly web applications. With a strong passion for everything I do.

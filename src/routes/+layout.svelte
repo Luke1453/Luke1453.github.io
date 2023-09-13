@@ -17,7 +17,28 @@
 				<Avatar src="avatar.jpg" width="w-12" />
 			</svelte:fragment>
 
-			(title)
+			<section class="hidden md:block">
+				<nav
+					class="flex
+          flex-row
+          gap-2
+          border-0
+          border-surface-100-800-token
+          bg-surface-50/50
+          dark:bg-surface-900/50
+          backdrop-blur-lg
+          rounded-bl-container-token
+          rounded-br-container-token
+          md:rounded-token
+          p-2
+          
+          shadow-xl"
+				>
+					<a href="/" class="btn md:btn-sm hover:variant-soft-primary">Home </a>
+					<a href="/about" class="btn md:btn-sm hover:variant-soft-primary">About </a>
+					<a href="/projects" class="btn md:btn-sm hover:variant-soft-primary">Projects</a>
+				</nav>
+			</section>
 
 			<svelte:fragment slot="trail">
 				<ThemeSwitch />
