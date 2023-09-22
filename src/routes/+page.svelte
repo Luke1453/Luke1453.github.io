@@ -5,14 +5,14 @@
 <div class="page-container">
 	<header class="grid grid-cols-1 md:grid-cols-[1fr_auto] gap-4 items-center">
 		<div class="order-2 md:order-1 max-w-2xl space-y-8">
-			<h1 class="primary-color text-4xl md:text-6xl font-bold">Hello, I'm Lukasz.</h1>
+			<h1 class="primary-color text-4xl md:text-7xl font-bold">Hello, I'm Lukasz.</h1>
 			<p class="secondary-color text-2xl">
 				A seasoned frontend developer with over 20 years of experience in creating responsive and
 				user-friendly web applications. With a strong passion for everything I do.
 			</p>
 			<div class="flex space-x-4">
 				<a
-					class="btn btn-link btn-icon"
+					class="btn round-button btn-icon"
 					href="mailto:lukjut@gmail.com"
 					target=""
 					rel="noreferrer"
@@ -20,14 +20,14 @@
 					><i class="fa-solid fa-envelope" />
 				</a>
 				<a
-					class="btn btn-link btn-icon"
+					class="btn round-button btn-icon"
 					href="https://github.com/Luke1453"
 					target="_blank"
 					rel="noreferrer"
 					title="Github"
 					><i class="fa-brands fa-github" />
 				</a><a
-					class="btn btn-link btn-icon"
+					class="btn round-button btn-icon"
 					href="https://www.linkedin.com/in/lukjut/"
 					target="_blank"
 					rel="noreferrer"
@@ -48,7 +48,7 @@
 		<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 text-center md:text-left">
 			<div class="space-y-1">
 				<span class="statistic font-heading-token primary-color text-7xl">7+</span>
-				<p class="blue-color">Years Of Experience</p>
+				<p class="blue-color" style="font-weight: 600;">Years Of Experience</p>
 			</div>
 		</div>
 	</section>
@@ -86,7 +86,7 @@
 
 	<section class="grid grid-cols-1 md:grid-cols-[1fr_auto] items-center gap-4">
 		<p class="text-center md:text-left">Ready to begin on your first project?</p>
-		<a href="mailto:lukjut@gmail.com" class="btn btn-link md:btn-lg variant-filled-primary"
+		<a href="mailto:lukjut@gmail.com" class="btn button md:btn-lg variant-filled-primary"
 			><i class="fa-solid fa-envelope" /> <span>Contact Me</span></a
 		>
 	</section>
@@ -97,7 +97,7 @@
 		margin-left: auto;
 		margin-right: auto;
 		max-width: 80rem;
-		padding: 2.5rem 1rem 2.5rem 1rem;
+		padding: 5rem 1rem 5rem 1rem;
 	}
 
 	.statistic {
@@ -126,14 +126,20 @@
 		color: #3b82f6;
 	}
 
-	.btn-link {
+	.round-button {
 		color: rgb(29, 78, 216);
 		background-color: rgb(193, 224, 249);
 	}
 
-	.btn-link:hover {
+	.round-button:hover {
 		background-color: rgb(68, 149, 255);
 		color: white;
+	}
+
+	.button {
+		background-color: #4496ff;
+		color: white;
+		font-weight: bold;
 	}
 
 	.divider {

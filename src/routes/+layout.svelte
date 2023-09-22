@@ -70,12 +70,21 @@
 		Drawer
 	{/if}
 </Drawer>
-<AppShell class="w-full h-full flex flex-col overflow-hidden">
+
+<AppShell
+	class="w-full h-full flex flex-col overflow-hidden"
+	slotPageHeader=" md:place-items-center items-center"
+>
 	<svelte:fragment slot="pageHeader">
+		<!-- padding="md:py-4 md:px-16" -->
+		<!-- gap="gap-4" -->
 		<AppBar
+			class="!max-w-7xl mx-auto "
+			regionRowMain="md:place-items-center"
 			gridColumns="grid-cols-3"
-			slotDefault="place-self-center"
-			slotTrail="place-content-end"
+			slotLead="justify-self-start"
+			slotDefault="justify-self-center"
+			slotTrail="justify-self-end"
 			background="bg-transparent"
 		>
 			<svelte:fragment slot="lead">
@@ -85,19 +94,19 @@
 			<section class="hidden md:block">
 				<nav
 					class="flex
-          flex-row
-          gap-2
-          border-0
-          border-surface-100-800-token
-          bg-surface-50/50
-          dark:bg-surface-900/50
-          backdrop-blur-lg
-          rounded-bl-container-token
-          rounded-br-container-token
-          md:rounded-token
-          p-2
-          shadow-xl
-          nav"
+      flex-row
+      gap-2
+      border-0
+      border-surface-100-800-token
+      bg-surface-50/50
+      dark:bg-surface-900/50
+      backdrop-blur-lg
+      rounded-bl-container-token
+      rounded-br-container-token
+      md:rounded-token
+      p-2
+      shadow-xl
+      nav"
 				>
 					{#each links as link}
 						<a
@@ -159,6 +168,12 @@
 </AppShell>
 
 <style>
+	.page-container {
+		margin-left: auto;
+		margin-right: auto;
+		max-width: 80rem;
+	}
+
 	.footer {
 		background-color: hsla(0, 0%, 100%, 1);
 	}
@@ -178,13 +193,6 @@
 
 	.nav {
 		background-color: rgba(255, 255, 255, 0.4);
-	}
-
-	.nav-drawer-background {
-		backdrop-filter: blur(5px);
-	}
-	.nav-drawer-height {
-		height: 10px;
 	}
 
 	.nav-button:hover {
