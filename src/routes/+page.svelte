@@ -42,7 +42,7 @@
 		/>
 	</header>
 
-	<hr class="divider divider-color" />
+	<hr class="divider" />
 
 	<section>
 		<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 text-center md:text-left">
@@ -53,7 +53,7 @@
 		</div>
 	</section>
 
-	<hr class="divider divider-color" />
+	<hr class="divider" />
 
 	<section class="grid grid-cols-1 md:grid-cols-3 gap-4 lg:gap-8" data-svelte-h="svelte-1u9sn7t">
 		<div class="card variant-ringed-hollow p-4 md:p-8 space-y-4">
@@ -82,7 +82,7 @@
 		</div>
 	</section>
 
-	<hr class="divider divider-color" />
+	<hr class="divider" />
 
 	<section class="grid grid-cols-1 md:grid-cols-[1fr_auto] items-center gap-4">
 		<p class="text-center md:text-left">Ready to begin on your first project?</p>
@@ -104,7 +104,9 @@
 		line-height: 0.75;
 	}
 
-	.divider-color {
+	.divider {
+		max-width: 100px;
+		margin: 40px 0px 40px 0px;
 		border-color: #43537d;
 		opacity: 0.3;
 	}
@@ -140,11 +142,6 @@
 		background-color: #4496ff;
 		color: white;
 		font-weight: bold;
-	}
-
-	.divider {
-		max-width: 100px;
-		margin: 40px 0px 40px 0px;
 	}
 
 	.font-heading-token {

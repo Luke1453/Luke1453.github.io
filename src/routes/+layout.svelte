@@ -26,9 +26,10 @@
 	};
 
 	const links = [
-		{ name: 'Home', path: '/' },
-		{ name: 'About', path: '/about' },
-		{ name: 'Projects', path: '/projects' }
+		{ name: 'Home', path: '/', target: '_self' },
+		{ name: 'About', path: '/about', target: '_self' },
+		{ name: 'Projects', path: '/projects', target: '_self' },
+    { name: 'Chess', path: 'https://chess.devlake.xyz/', target: '_blank' },
 	];
 
 	function handleMenuClick() {
@@ -60,6 +61,7 @@
 			{#each links as link}
 				<a
 					href={link.path}
+          target={link.target}
 					on:click={handleDrawerClose}
 					class="btn md:btn-sm nav-button"
 					class:nav-button-active={$page.url.pathname === link.path}>{link.name}</a
@@ -76,8 +78,6 @@
 	slotPageHeader=" md:place-items-center items-center"
 >
 	<svelte:fragment slot="pageHeader">
-		<!-- padding="md:py-4 md:px-16" -->
-		<!-- gap="gap-4" -->
 		<AppBar
 			class="!max-w-7xl mx-auto "
 			regionRowMain="md:place-items-center"
@@ -94,23 +94,24 @@
 			<section class="hidden md:block">
 				<nav
 					class="flex
-      flex-row
-      gap-2
-      border-0
-      border-surface-100-800-token
-      bg-surface-50/50
-      dark:bg-surface-900/50
-      backdrop-blur-lg
-      rounded-bl-container-token
-      rounded-br-container-token
-      md:rounded-token
-      p-2
-      shadow-xl
-      nav"
+          flex-row
+          gap-2
+          border-0
+          border-surface-100-800-token
+          bg-surface-50/50
+          dark:bg-surface-900/50
+          backdrop-blur-lg
+          rounded-bl-container-token
+          rounded-br-container-token
+          md:rounded-token
+          p-2
+          shadow-xl
+          nav"
 				>
 					{#each links as link}
 						<a
 							href={link.path}
+              target={link.target}
 							class="btn md:btn-sm nav-button"
 							class:nav-button-active={$page.url.pathname === link.path}>{link.name}</a
 						>
@@ -168,12 +169,6 @@
 </AppShell>
 
 <style>
-	.page-container {
-		margin-left: auto;
-		margin-right: auto;
-		max-width: 80rem;
-	}
-
 	.footer {
 		background-color: hsla(0, 0%, 100%, 1);
 	}

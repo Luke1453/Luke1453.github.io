@@ -1,11 +1,15 @@
 <div class="page-container">
 	<h1 class="primary-color text-4xl md:text-7xl font-bold text-center">About Me</h1>
 
+	<hr class="divider" />
+
 	<img
-		class="bg-black w-full aspect-[21:9] rounded-container-token overflow-hidden shadow-xl my-[80px]"
+		class="bg-black about-image w-full rounded-container-token overflow-hidden shadow-xl my-[80px]"
 		src="dev.jpg"
 		alt="banner"
 	/>
+
+	<hr class="divider" />
 
 	<section class="space-y-8">
 		<p class="text-xl md:text-3xl">
@@ -50,7 +54,7 @@
 	</section>
 
 	<section class="text-center pt-[5rem]">
-		<a href="/about" class="btn button btn-lg variant-filled-primary"
+		<a href="balls.pdf" target="_blank" class="btn button btn-lg variant-filled-primary"
 			><i class="fa-solid fa-download" /> <span>Download Resume</span></a
 		>
 	</section>
@@ -64,55 +68,27 @@
 		padding: 5rem 1rem 5rem 1rem;
 	}
 
-	.statistic {
-		line-height: 0.75;
-	}
-
-	.divider-color {
-		border-color: #43537d;
-		opacity: 0.3;
-	}
-
 	.primary-color {
 		color: #172554;
-	}
-	.secondary-color {
-		color: #43537d;
 	}
 	.blue-color {
 		color: #3b82f6;
 	}
 
-	.card {
-		--tw-ring-color: rgba(67, 83, 125, 0.3);
-	}
-	.card-icon {
-		color: #3b82f6;
-	}
-
-	.round-button {
-		color: rgb(29, 78, 216);
-		background-color: rgb(193, 224, 249);
+	.divider {
+		max-width: 100px;
+		margin: 40px 0px 40px 0px;
+		border-color: #43537d;
+		opacity: 0.3;
 	}
 
-	.round-button:hover {
-		background-color: rgb(68, 149, 255);
-		color: white;
+	.about-image {
+		aspect-ratio: 21 / 9;
 	}
 
 	.button {
 		background-color: #4496ff;
 		color: white;
 		font-weight: bold;
-	}
-
-	.divider {
-		max-width: 100px;
-		margin: 40px 0px 40px 0px;
-	}
-
-	.font-heading-token {
-		font-family: var(--theme-font-family-heading);
-		font-weight: 700;
 	}
 </style>
