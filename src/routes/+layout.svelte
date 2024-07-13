@@ -27,8 +27,6 @@
 
 	const links = [
 		{ name: 'Home', path: '/', target: '_self' },
-		{ name: 'About', path: '/about', target: '_self' },
-		{ name: 'Projects', path: '/projects', target: '_self' },
     { name: 'Chess', path: 'https://chess.devlake.xyz/', target: '_blank' },
 	];
 
