@@ -5,22 +5,20 @@
 @tailwind variants;
 
 :root {
-    --theme-rounded-base: 20px;
-    --theme-rounded-container: 4px;
-    --theme-font-family-heading: Inter, system-ui, sans-serif;
-    --theme-font-family-base: system-ui;
+	--theme-rounded-base: 20px;
+	--theme-rounded-container: 4px;
+	--theme-font-family-heading: Inter, sans-serif, system-ui;
+	--theme-font-family-base: system-ui;
 }
 
-html, body { @apply h-full overflow-hidden; }
+html,
 body {
-	background-color:hsla(0,0%,100%,1);
-	background-image:
-		radial-gradient(at 56% 70%, hsla(199,75%,88%,1) 0px, transparent 50%),
-		radial-gradient(at 79% 29%, hsla(229,81%,85%,1) 0px, transparent 50%),
-		radial-gradient(at 27% 81%, hsla(210,20%,98%,1) 0px, transparent 50%),
-		radial-gradient(at 27% 24%, hsla(201,79%,73%,1) 0px, transparent 50%);
-	/* background-attachment: fixed;
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover; */
+	@apply h-full overflow-hidden;
+}
+body {
+	background-color: rgba(215, 154, 33, 1);
+	background-image: radial-gradient(at left bottom, rgba(214, 94, 14, 1), transparent 30%),
+		radial-gradient(at right bottom, rgba(214, 94, 14, 1), transparent 30%),
+		radial-gradient(at center top, rgba(214, 94, 14, 1), transparent 60%),
+		radial-gradient(at center, #e66868, transparent 75%);
 }

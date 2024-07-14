@@ -2,6 +2,8 @@ import { join } from 'path';
 import type { Config } from 'tailwindcss';
 
 import { skeleton } from '@skeletonlabs/tw-plugin';
+import { lightTheme } from './src/themes/light-theme';
+import { darkTheme } from './src/themes/dark-theme';
 
 const config = {
 	darkMode: 'class',
@@ -20,7 +22,8 @@ const config = {
 	plugins: [
 		skeleton({
 			themes: {
-				preset: [{ name: 'skeleton', enhancements: true }]
+				// preset: [{ name: 'skeleton', enhancements: true }]
+				custom: [lightTheme, darkTheme]
 			}
 		})
 	]

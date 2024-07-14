@@ -1,5 +1,5 @@
 <div class="switch-container">
-	<input type="checkbox" id="switch" />
+	<input type="checkbox" id="switch" checked={true} />
 	<label for="switch">
 		<i class="fas fa-sun" />
 		<i class="fas fa-moon" />

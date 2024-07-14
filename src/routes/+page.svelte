@@ -7,24 +7,14 @@
 		<div class="order-2 md:order-1 max-w-2xl space-y-8">
 			<h1 class="primary-color text-4xl md:text-7xl font-bold">Hello, I'm Lukasz.</h1>
 			<p class="secondary-color text-2xl">
-				A seasoned frontend developer with over 20 years of experience in creating responsive and
-				user-friendly web applications. With a strong passion for everything I do.
+				A seasoned frontend developer with over 20 years of experience in creating responsive and user-friendly web applications.
+				With a strong passion for everything I do.
 			</p>
 			<div class="flex space-x-4">
-				<a
-					class="btn round-button btn-icon"
-					href="mailto:lukjut@gmail.com"
-					target=""
-					rel="noreferrer"
-					title="Email"
+				<a class="btn round-button btn-icon" href="mailto:lukjut@gmail.com" target="" rel="noreferrer" title="Email"
 					><i class="fa-solid fa-envelope" />
 				</a>
-				<a
-					class="btn round-button btn-icon"
-					href="https://github.com/Luke1453"
-					target="_blank"
-					rel="noreferrer"
-					title="Github"
+				<a class="btn round-button btn-icon" href="https://github.com/Luke1453" target="_blank" rel="noreferrer" title="Github"
 					><i class="fa-brands fa-github" />
 				</a><a
 					class="btn round-button btn-icon"
@@ -36,10 +26,7 @@
 				</a>
 			</div>
 		</div>
-		<Avatar
-			class="order-1 md:order-2 rounded-full w-32 md:w-[400px] aspect-square overflow-hidden shadow-xl"
-			src="avatar.jpg"
-		/>
+		<Avatar class="order-1 md:order-2 rounded-full w-32 md:w-[400px] aspect-square overflow-hidden shadow-xl" src="avatar.jpg" />
 	</header>
 
 	<hr class="divider" />
@@ -60,24 +47,22 @@
 			<i class="card-icon fa-solid fa-screwdriver-wrench text-4xl text-primary-500" />
 			<h3 class="h3 font-heading-token">Development</h3>
 			<p class="secondary-color">
-				I possess a wide range of skills that enable me to develop visually appealing and
-				interactive user interfaces for web applications.
+				I possess a wide range of skills that enable me to develop visually appealing and interactive user interfaces for web
+				applications.
 			</p>
 		</div>
 		<div class="card variant-ringed-hollow p-4 md:p-8 space-y-4">
 			<i class="card-icon fa-solid fa-palette text-4xl text-primary-500" />
 			<h3 class="h3 font-heading-token">Design</h3>
 			<p class="secondary-color">
-				Over the years, I have honed my ability to create visually appealing interfaces that are
-				both user-friendly and intuitive.
+				Over the years, I have honed my ability to create visually appealing interfaces that are both user-friendly and intuitive.
 			</p>
 		</div>
 		<div class="card variant-ringed-hollow p-4 md:p-8 space-y-4">
 			<i class="card-icon fa-solid fa-users text-4xl text-primary-500" />
 			<h3 class="h3 font-heading-token">User Experience</h3>
 			<p class="secondary-color">
-				I understand the importance of creating a seamless UX for end-users. Which includes a solid
-				understanding user behavior.
+				I understand the importance of creating a seamless UX for end-users. Which includes a solid understanding user behavior.
 			</p>
 		</div>
 	</section>
