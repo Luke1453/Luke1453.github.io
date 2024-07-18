@@ -81,8 +81,6 @@
 	.page-container {
 		margin-left: auto;
 		margin-right: auto;
-		max-width: 80rem;
-		padding: 5rem 1rem 5rem 1rem;
 	}
 
 	.statistic {

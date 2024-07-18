@@ -11,57 +11,55 @@
 	const projectLinks = [{ name: 'Chess', path: 'https://chess.devlake.xyz/', target: '_blank' }];
 </script>
 
-<div class="w-full h-full flex flex-col">
+<div class="h-screen flex flex-col overflow-x-hidden">
+	<!-- Header -->
+	<div class="w-full z-50 absolute top-0 shadow-xl">
+		<div class="!max-w-6xl mx-auto">
+			<AppBar
+				regionRowMain="md:place-items-center"
+				gridColumns="grid-cols-2"
+				slotLead="justify-self-start"
+				slotDefault="justify-self-end"
+				padding="p-4"
+				background=""
+			>
+				<svelte:fragment slot="lead">
+					<a href={home.path} target={home.target}>
+						<div>
+							<span class="text-black" style="display: block; font-weight: bold;">Lukasz Jutkewicz</span>
+							<span style="display: block;">Full Stack Developer @ DanskeBank</span>
+						</div>
+					</a>
+				</svelte:fragment>
+
+				<section class="hidden md:block">
+					<nav class="flex flex-row bg-transparent space-x-4">
+						{#each navLinks as link}
+							<a
+								href={link.path}
+								target={link.target}
+								class="btn-lg font-bold p-0 hover:underline decoration-dashed decoration-2"
+								style="text-underline-offset: 6px;">{link.name}</a
+							>
+						{/each}
+					</nav>
+				</section>
+
+				<!-- <section class="block md:hidden">
+            <button class="btn variant-filled-primary mob-nav-button" on:click={/handleMenuClick}>
+            <i class="fa-solid fa-bars" />
+            <span>Menu</span>
+            </button>
+            </section> -->
+			</AppBar>
+		</div>
+	</div>
+
+	<!-- Content Area -->
 	<div class="!max-w-6xl mx-auto">
-		<!-- Header -->
-		<AppBar
-			class="flex-none mt-2 px-0"
-			regionRowMain="md:place-items-center"
-			gridColumns="grid-cols-2"
-			slotLead="justify-self-start"
-			slotDefault="justify-self-end"
-			background="bg-transparent"
-		>
-			<svelte:fragment slot="lead">
-				<a href={home.path} target={home.target}>
-					<div>
-						<span class="text-black" style="display: block; font-weight: bold;">Lukasz Jutkewicz</span>
-						<span style="display: block;">Full Stack Developer @ DanskeBank</span>
-					</div>
-				</a>
-			</svelte:fragment>
-
-			<section class="hidden md:block">
-				<nav
-					class="flex
-      flex-row
-      bg-transparent
-          nav"
-				>
-					{#each navLinks as link}
-						<a
-							href={link.path}
-							target={link.target}
-							class="btn-lg font-bold p-0 mx-4
-        hover:underline decoration-dashed decoration-2"
-							style="text-underline-offset: 6px;">{link.name}</a
-						>
-					{/each}
-				</nav>
-			</section>
-
-			<!-- <section class="block md:hidden">
-			<button class="btn variant-filled-primary mob-nav-button" on:click={/handleMenuClick}>
-      <i class="fa-solid fa-bars" />
-      <span>Menu</span>
-			</button>
-      </section> -->
-		</AppBar>
-
-		<!-- Content Area -->
-		<div id="content" class="mx-auto h-screen flex flex-col">
+		<div id="content" class="mt-24 mx-auto flex flex-col">
 			<!-- Page -->
-			<div id="page" class="overflow-y-auto overflow-x-hidden">
+			<div id="page" class="overflow-y-auto">
 				<!-- Slot: Page Content -->
 				<main id="page-content" class="flex-auto"><slot /></main>
 
@@ -106,8 +104,7 @@
           rounded-br-container-token
           md:rounded-token
           p-2
-          shadow-xl
-          nav"
+          shadow-xl"
 		>
 			{#each links as link}
 				<a
@@ -123,37 +120,3 @@
 		Drawer
 	{/if}
 </Drawer> -->
-
-<style>
-	html,
-	body {
-		height: 100%;
-		margin: 0;
-	}
-	.container {
-		display: flex;
-		flex-direction: column;
-		height: 100%;
-	}
-	.max-w-6xl {
-		max-width: 6xl; /* Ensure this is correctly defined or change to a valid width */
-	}
-	.content {
-		flex: 1;
-		overflow-y: auto;
-	}
-	.page {
-		overflow-y: auto;
-		overflow-x: hidden;
-	}
-	.header {
-		position: fixed;
-		top: 0;
-		width: 100%;
-		background: white; /* Optional: to cover the background of header */
-		z-index: 1000; /* Ensure header stays on top */
-	}
-	.main-content {
-		margin-top: 60px; /* Adjust according to the header height */
-	}
-</style>
