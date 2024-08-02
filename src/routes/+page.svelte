@@ -42,8 +42,8 @@
 
 	<hr class="divider" />
 
-	<section class="grid grid-cols-1 md:grid-cols-3 gap-4 lg:gap-8" data-svelte-h="svelte-1u9sn7t">
-		<div class="card variant-ringed-hollow p-4 md:p-8 space-y-4">
+	<section id="myProjects" class="grid grid-cols-1 md:grid-cols-3 gap-4 lg:gap-8" data-svelte-h="svelte-1u9sn7t">
+		<div class="card variant-ringed-hollow p-4 md:p-8 space-y-4 dark bg-surface-backdrop-token">
 			<i class="card-icon fa-solid fa-screwdriver-wrench text-4xl text-primary-500" />
 			<h3 class="h3 font-heading-token">Development</h3>
 			<p class="secondary-color">
@@ -51,14 +51,14 @@
 				applications.
 			</p>
 		</div>
-		<div class="card variant-ringed-hollow p-4 md:p-8 space-y-4">
+		<div class="card variant-ringed-hollow p-4 md:p-8 space-y-4 bg-surface-backdrop-token">
 			<i class="card-icon fa-solid fa-palette text-4xl text-primary-500" />
 			<h3 class="h3 font-heading-token">Design</h3>
 			<p class="secondary-color">
 				Over the years, I have honed my ability to create visually appealing interfaces that are both user-friendly and intuitive.
 			</p>
 		</div>
-		<div class="card variant-ringed-hollow p-4 md:p-8 space-y-4">
+		<div class="card variant-ringed-hollow p-4 md:p-8 space-y-4 bg-surface-backdrop-token">
 			<i class="card-icon fa-solid fa-users text-4xl text-primary-500" />
 			<h3 class="h3 font-heading-token">User Experience</h3>
 			<p class="secondary-color">
@@ -68,13 +68,6 @@
 	</section>
 
 	<hr class="divider" />
-
-	<section class="grid grid-cols-1 md:grid-cols-[1fr_auto] items-center gap-4">
-		<p class="text-center md:text-left">Ready to begin on your first project?</p>
-		<a href="mailto:lukjut@gmail.com" class="btn button md:btn-lg variant-filled-primary"
-			><i class="fa-solid fa-envelope" /> <span>Contact Me</span></a
-		>
-	</section>
 </div>
 
 <style>
@@ -119,12 +112,6 @@
 	.round-button:hover {
 		background-color: rgb(68, 149, 255);
 		color: white;
-	}
-
-	.button {
-		background-color: #4496ff;
-		color: white;
-		font-weight: bold;
 	}
 
 	.font-heading-token {

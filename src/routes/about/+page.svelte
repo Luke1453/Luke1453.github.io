@@ -1,3 +1,11 @@
+<script>
+	import { afterNavigate } from '$app/navigation';
+
+	afterNavigate(() => {
+		window.scrollTo(0, 0);
+	});
+</script>
+
 <div class="page-container">
 	<h1 class="primary-color text-4xl md:text-7xl font-bold text-center">About Me</h1>
 

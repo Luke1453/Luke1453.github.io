@@ -1,45 +1,49 @@
 <script lang="ts">
 	import '../app.postcss';
+	import { goto, afterNavigate } from '$app/navigation';
 	import { AppBar } from '@skeletonlabs/skeleton';
 
-	const home = { name: 'Home', path: '/', target: '_self' };
+	afterNavigate(() => {
+		window.scrollTo(0, 0);
+	});
+
+	const home = { name: 'Home', path: '/' };
 	const navLinks = [
-		{ name: 'About', path: '/about', target: '_self' },
-		{ name: 'My Projects', path: '/#myProjects', target: '_self' },
-		{ name: 'Say Hi 👋', path: '/#sayHi', target: '_self' }
+		{ name: 'About', path: '/about' },
+		{ name: 'My Projects', path: '/#myProjects' },
+		{ name: 'Say Hi 👋', path: '/#contact' }
 	];
 	const projectLinks = [{ name: 'Chess', path: 'https://chess.devlake.xyz/', target: '_blank' }];
 </script>
 
-<div class="h-screen flex flex-col overflow-x-hidden">
+<div class="h-screen flex flex-col overflow-x-hidden background">
 	<!-- Header -->
-	<div class="w-full z-50 absolute top-0 shadow-xl">
+	<div class="w-full z-50 absolute top-0 shadow-xl background">
 		<div class="!max-w-6xl mx-auto">
 			<AppBar
 				regionRowMain="md:place-items-center"
 				gridColumns="grid-cols-2"
 				slotLead="justify-self-start"
 				slotDefault="justify-self-end"
-				padding="p-4"
-				background=""
+				padding="py-4"
+				background="bg-transparent"
 			>
 				<svelte:fragment slot="lead">
-					<a href={home.path} target={home.target}>
+					<button on:click={() => goto(home.path)} class="text-left">
 						<div>
 							<span class="text-black" style="display: block; font-weight: bold;">Lukasz Jutkewicz</span>
 							<span style="display: block;">Full Stack Developer @ DanskeBank</span>
 						</div>
-					</a>
+					</button>
 				</svelte:fragment>
 
 				<section class="hidden md:block">
 					<nav class="flex flex-row bg-transparent space-x-4">
 						{#each navLinks as link}
-							<a
-								href={link.path}
-								target={link.target}
-								class="btn-lg font-bold p-0 hover:underline decoration-dashed decoration-2"
-								style="text-underline-offset: 6px;">{link.name}</a
+							<button
+								on:click={() => goto(link.path)}
+								class="btn-lg font-bold p-0 hover:underline decoration-dashed decoration-2 decoration-primary"
+								style="text-underline-offset: 6px; text-decoration-color: inherit;">{link.name}</button
 							>
 						{/each}
 					</nav>
@@ -57,32 +61,49 @@
 
 	<!-- Content Area -->
 	<div class="!max-w-6xl mx-auto">
-		<div id="content" class="mt-24 mx-auto flex flex-col">
+		<div id="content" class="mt-20 mx-auto flex flex-col">
 			<!-- Page -->
 			<div id="page" class="overflow-y-auto">
 				<!-- Slot: Page Content -->
-				<main id="page-content" class="flex-auto"><slot /></main>
+				<main id="page-content" class="flex-auto my-16"><slot /></main>
 
 				<!-- Page Footer -->
-				<footer id="page-footer" class="footer flex-none">
-					<footer class="bg-surface-50-900-token p-10 space-y-8 flex flex-col items-center">
-						<div class="flex space-x-4">
-							<a class="btn btn-link btn-icon" href="mailto:lukjut@gmail.com" target="" rel="noreferrer" title="Email"
-								><i class="fa-solid fa-envelope" />
-							</a>
-							<a class="btn btn-link btn-icon" href="https://github.com/Luke1453" target="_blank" rel="noreferrer" title="Github"
-								><i class="fa-brands fa-github" />
-							</a><a
-								class="btn btn-link btn-icon"
-								href="https://www.linkedin.com/in/lukjut/"
-								target="_blank"
-								rel="noreferrer"
-								title="LinkedIn"
-								><i class="fa-brands fa-linkedin" />
-							</a>
-						</div>
-						<p class="text-xs blue-color">© Copyright 2023. All rights reserved.</p>
-					</footer>
+				<footer id="contact" class="bg-transparent px-10 pb-6 flex flex-col items-center">
+					<div class="flex flex-col pb-8">
+						<p class="text-center pb-8 font-bold text-2xl">Ready to begin your project?</p>
+						<a
+							href="mailto:lukjut@gmail.com"
+							class="btn button self-center md:btn-xl bg-primary-200 text-primary-500 hover:text-white hover:bg-primary-500"
+							><i class="fa-solid fa-envelope" /> <span>Contact Me</span></a
+						>
+					</div>
+
+					<div class="flex space-x-8">
+						<a
+							class="btn-icon btn-icon-lg bg-primary-200 text-primary-500 hover:text-white hover:bg-primary-500"
+							href="https://github.com/Luke1453"
+							target="_blank"
+							rel="noreferrer"
+							title="Github"
+							><i class="fa-brands fa-github" />
+						</a><a
+							class="btn-icon btn-icon-lg bg-primary-200 text-primary-500 hover:text-white hover:bg-primary-500"
+							href="https://www.linkedin.com/in/lukjut/"
+							target="_blank"
+							rel="noreferrer"
+							title="LinkedIn"
+							><i class="fa-brands fa-linkedin" />
+						</a>
+						<a
+							class="btn-icon btn-icon-lg bg-primary-200 text-primary-500 hover:text-white hover:bg-primary-500"
+							href="https://www.instagram.com/dziudaizm/"
+							target=""
+							rel="noreferrer"
+							title="Instagram"
+							><i class="fa-brands fa-instagram" />
+						</a>
+					</div>
+					<p class="pt-24 text-sm">© Copyright 2024 Lukaš Jutkevič. All rights reserved.</p>
 				</footer>
 			</div>
 		</div>
