@@ -19,7 +19,7 @@
 <div class="h-screen flex flex-col overflow-x-hidden background">
 	<!-- Header -->
 	<div class="w-full z-50 absolute top-0 shadow-xl background">
-		<div class="!max-w-6xl mx-auto">
+		<div class="!max-w-5xl mx-auto">
 			<AppBar
 				regionRowMain="md:place-items-center"
 				gridColumns="grid-cols-2"
@@ -60,12 +60,12 @@
 	</div>
 
 	<!-- Content Area -->
-	<div class="!max-w-6xl mx-auto">
+	<div class="!max-w-6xl px-16 mx-auto">
 		<div id="content" class="mt-20 mx-auto flex flex-col">
 			<!-- Page -->
 			<div id="page" class="overflow-y-auto">
 				<!-- Slot: Page Content -->
-				<main id="page-content" class="flex-auto my-16"><slot /></main>
+				<main id="page-content" class="flex-auto my-8 overflow-x-visible"><slot /></main>
 
 				<!-- Page Footer -->
 				<footer id="contact" class="bg-transparent px-10 pb-6 flex flex-col items-center">
